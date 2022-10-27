@@ -9,12 +9,12 @@
     <script>
         window.addEventListener("ucEvent", function (e) {    
     if( e.detail && e.detail.event == "consent_status") {
-        // check for consent status of service "Google Ads Remarketing"
-        if(e.detail['Google Ads Remarketing'] === true) {
-          console.log('Google Ads Remarketing has consent');
+        // check for consent status of service "YouTube Video"
+        if(e.detail['Youtube Video'] === true) {
+          console.log('Youtube Video has consent');
         }
         else {
-          console.log('Google Ads Remarketing has no consent');
+          console.log('Youtube Video has no consent');
         }
     }
 });
