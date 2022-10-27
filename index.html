@@ -4,7 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" , initial-scale="1.0">
-    <title>My CMP v2 Testpage</title>    
+    <title>My CMP v2 Testpage</title>   
+    
+        window.addEventListener("ucEvent", function (e) {    
+    if( e.detail && e.detail.event == "consent_status") {
+        // check for consent status of service "YouTube Video"
+        if(e.detail['YouTube Video'] === true) {
+          console.log('YouTube Video has consent');
+        }
+        else {
+          console.log('YouTube Video has no consent');
+        }
+    }
+});
     
     <!-- Usercentrics CMP Script Tag -->
     <script id="usercentrics-cmp" src="https://app.usercentrics.eu/browser-ui/latest/loader.js" data-settings-id="O-NhwsNjh" async></script>
@@ -47,18 +59,7 @@
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-MW6SFJV');</script>
     <!-- End Google Tag Manager -->
-    
-    window.addEventListener("ucEvent", function (e) {    
-    if( e.detail && e.detail.event == "consent_status") {
-        // check for consent status of service "YouTube Video"
-        if(e.detail['YouTube Video'] === true) {
-          console.log('YouTube Video has consent');
-        }
-        else {
-          console.log('YouTube Video has no consent');
-        }
-    }
-});
+   
 
 </head>
 
