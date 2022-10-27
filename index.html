@@ -10,11 +10,11 @@
         window.addEventListener("ucEvent", function (e) {    
     if( e.detail && e.detail.event == "consent_status") {
         // check for consent status of service "YouTube Video"
-        if(e.detail['Youtube Video'] === true) {
-          console.log('Youtube Video has consent');
+        if(e.detail['YouTube Video'] === true) {
+          console.log('YouTube Video has consent');
         }
         else {
-          console.log('Youtube Video has no consent');
+          console.log('YouTube Video has no consent');
         }
     }
 });
