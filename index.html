@@ -78,7 +78,7 @@
     <script>
     window.addEventListener("ucEvent", function (e) {
 
-        if(e.detail.type == "explicit" && e.detail["YouTube Video"]){
+        if(e.detail.type == "consent_status" && e.detail["YouTube Video"]){
     
             document.getElementById('log').innerHTML = '<iframe width="560" height="315" uc-src="https://www.youtube.com/embed/tRN4RZ9Hoq0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
             
