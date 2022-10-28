@@ -6,20 +6,19 @@
     <meta name="viewport" content="width=device-width" , initial-scale="1.0">
     <title>My CMP v2 Testpage</title>  
     
-    <script>
-        window.addEventListener("ucEvent", function (e) {    
-    if( e.detail && e.detail.event == "consent_status") {
-        // check for consent status of service "YouTube Video"
-        if(e.detail['YouTube Video'] === true) {
-          console.log('YouTube Video has consent');
-        }
-        else {
-          console.log('YouTube Video has no consent');
-        }
+ <script>
+    window.addEventListener("ucEvent", function (e) {
+
+        if(e.detail.type == "explicit" && e.detail["EQS IR tools"]){
+    
+            document.getElementById('log').innerHTML = '<iframe style="margin-left: -10px;" frameborder="0" height="162" width="220 scrolling=" no"="" src="https://charts3.equitystory.com/teaser/hornbach/German" class="shareprice"></iframe>';
+            
+    }else {
+            document.getElementById('log').innerHTML = '';
     }
-});
-    </script>
-        
+    });
+    
+    </script>       
     
     <!-- Usercentrics CMP Script Tag -->
     <script id="usercentrics-cmp" src="https://app.usercentrics.eu/browser-ui/latest/loader.js" data-settings-id="O-NhwsNjh" async></script>
@@ -74,24 +73,8 @@
 
     <h1>Usercentrics CMP V2 Test Page</h1>
     <img src="https://1nf2x118nwr23j3l7o2i40qd-wpengine.netdna-ssl.com/wp-content/uploads/2020/04/190208-UCS-Logo-800px.png" alt="uc-logo">
-    
-    <script>
-    window.addEventListener("ucEvent", function (e) {
 
-        if(e.detail.type == "true" && e.detail["YouTube Video"]){
-    
-            document.getElementById('log').innerHTML = '<iframe width="560" height="315" uc-src="https://www.youtube.com/embed/tRN4RZ9Hoq0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
-            
-    }else {
-          document.getElementById('log').innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/MgVoIqo7DEU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
-        }
-        
-    });
-    
-    </script>
-    
-  
-    
+ 
     <h2>smart data protector test vimeo</h2>
     <iframe src="https://player.vimeo.com/video/156947207?h=26aa0d434a" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 <p><a href="https://vimeo.com/156947207">Bruce Springsteen: 41 Years on Thunder Road</a> from <a href="https://vimeo.com/user24382070">Phil</a> on <a href="https://vimeo.com">Vimeo</a>.</p> 
