@@ -5,19 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" , initial-scale="1.0">
     <title>My CMP v2 Testpage</title>  
-    ^
-    <script>
-    window.addEventListener("ucEvent", function (e) {    
-    if( e.detail && e.detail.event == "consent_status") {
-        if(e.detail['YoutTube Video'] === true) { // check for consent status of service "YouTube Video"
-            console.log('YouTube Video has consent'); // // add your script here
-        } else {
-            console.log('YouTube Video has no consent'); // add your script here
-        }
-      }
-    });
-    </script>
-
     
     <!-- Usercentrics CMP Script Tag -->
     <script id="usercentrics-cmp" src="https://app.usercentrics.eu/browser-ui/latest/loader.js" data-settings-id="O-NhwsNjh" async></script>
@@ -77,6 +64,24 @@
     <h2>smart data protector test vimeo</h2>
     <iframe src="https://player.vimeo.com/video/156947207?h=26aa0d434a" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 <p><a href="https://vimeo.com/156947207">Bruce Springsteen: 41 Years on Thunder Road</a> from <a href="https://vimeo.com/user24382070">Phil</a> on <a href="https://vimeo.com">Vimeo</a>.</p> 
-</body>
+
+    
+    <script>
+    window.addEventListener("CMP_SHOWN", function (e) {
+    
+            document.getElementById('log').innerHTML = '';
+    }
+    });
+      window.addEventListener("SAVE", function (e) {
+    
+            document.getElementById('log').innerHTML = '<iframe id="haendlerkarte" src="https://webgispu.wigeogis.com/kunden/claas/map.php?LNG=DE&CTRISO=DEU&SHOWALL=1&CLUSTERING=1"></iframe>';
+
+    }
+    });
+    
+    </script>
+    <div id="log"></div>
+    
+    </body>
 
 </html>
