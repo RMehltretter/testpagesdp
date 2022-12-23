@@ -7,14 +7,9 @@
     <title>My CMP v2 Testpage</title>  
     
     <!-- Usercentrics CMP Script Tag -->
-    <link rel="preconnect" href="//app.usercentrics.eu">
-    <link rel="preconnect" href="//api.usercentrics.eu">
-    <link rel="preconnect" href="//privacy-proxy.usercentrics.eu">
-    <link rel="preload" href="//app.usercentrics.eu/browser-ui/latest/loader.js" as="script">
-    <link rel="preload" href="//privacy-proxy.usercentrics.eu/latest/uc-block.bundle.js" as="script">
-    <script id="usercentrics-cmp" data-settings-id="O-NhwsNjh" src="https://app.usercentrics.eu/browser-ui/latest/loader.js" async></script>
-    <script type="application/javascript" src="https://privacy-proxy.usercentrics.eu/latest/uc-block.bundle.js"></script>
-    <!-- END Usercentrics related code -->
+    <meta data-privacy-proxy-server="https://privacy-proxy-server.usercentrics.eu">
+    <script src="https://privacy-proxy.usercentrics.eu/latest/uc-block.bundle.js"></script>
+    <script id="usercentrics-cmp" src="https://app.usercentrics.eu/browser-ui/latest/loader.js" data-settings-id="O-NhwsNjh" async></script>
  
 </head>
 <body></body>
