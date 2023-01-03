@@ -7,9 +7,19 @@
     <title>My CMP v2 Testpage</title>  
     
     <!-- Usercentrics CMP Script Tag -->
-    <meta data-privacy-proxy-server="https://privacy-proxy-server.usercentrics.eu">
-    <script src="https://privacy-proxy.usercentrics.eu/latest/uc-block.bundle.js"></script>
-    <script id="usercentrics-cmp" src="https://app.usercentrics.eu/browser-ui/latest/loader.js" data-settings-id="O-NhwsNjh" async></script>
+    <link rel="preconnect" href="//app.usercentrics.eu">
+    <link rel="preconnect" href="//api.usercentrics.eu">
+    <link rel="preconnect" href="//privacy-proxy.usercentrics.eu">
+    <link rel="preload" href="//app.usercentrics.eu/browser-ui/latest/loader.js" as="script">
+    <link rel="preload" href="//privacy-proxy.usercentrics.eu/latest/uc-block.bundle.js" as="script">
+    <script id="usercentrics-cmp" data-settings-id="O-NhwsNjh" src="https://app.usercentrics.eu/browser-ui/latest/loader.js" async></script>
+    <script type="application/javascript" src="https://privacy-proxy.usercentrics.eu/latest/uc-block.bundle.js"></script>
+    <script>
+        // (optional) additional configs for the Smart Data Protector 
+        uc.reloadOnOptIn('BJz7qNsdj-7'); // reload page on YouTube opt-in
+    </script>
+    <!-- END Usercentrics related code -->
+   
    
 </head>
 <body></body>
