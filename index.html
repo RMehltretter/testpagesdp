@@ -7,12 +7,13 @@
     <title>My CMP v2 Testpage</title>  
 
 <script>
-const customMethod = () => {
+if (!window.UC_UI || !UC_UI.isInitialized()) {
+    window.addEventListener('UC_UI_INITIALIZED', function() {
+        UC_UI.closeCMP();
+    });
+} else {
+    customConsentHandler(UC_UI.isConsentRequired());
 }
-
-if (window.UC_UI && window.UC_UI.isInitialized()) {
-          UC_UI.closeCMP();
-} 
 </script>
 
 
