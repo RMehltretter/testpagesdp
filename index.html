@@ -19,10 +19,14 @@
     </div>
 </div>
 
-<script type="application/javascript">
-if (window.UC_UI && window.UC_UI.isInitialized()) {
-  console.log('UC UI is already initialized');
-} 
+<script>
+if (!window.UC_UI || !UC_UI.isInitialized()) {
+    window.addEventListener('UC_UI_INITIALIZED', function() {
+        UC_UI.closeCMP();
+    });
+} else {
+    customConsentHandler(UC_UI.isConsentRequired());
+}
 </script>
 
 
