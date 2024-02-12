@@ -14,13 +14,31 @@
     <link rel="preload" href="//privacy-proxy.usercentrics.eu/latest/uc-block.bundle.js" as="script">
     <script id="usercentrics-cmp" src="https://app.usercentrics.eu/browser-ui/latest/loader.js" data-settings-id="O-NhwsNjh" async></script>
     <script type="application/javascript" src="https://privacy-proxy.usercentrics.eu/latest/uc-block.bundle.js"></script>
+
+	
+<script>          
+uc.deactivateBlocking([
+'Sy1naC5nN'
+]);
+</script>
+
+//Sy1naC5nN = ID des Prescreen Dienstes
+
+dann auf das Element, das Job-Widget beinhaltet, hinweisen - https://docs.usercentrics.com/#/smart-data-protector?id=display-overlay-for-custom-elements 
+   
+<script>
+	
+uc.blockElements({
+'S1pcEj_jZX': '#locations_map_container',
+'ctDbl6j2y': '#xxxxx'
+});
+</script>
+
+//#xxxxxx = ID des Containers in der HTML Ihrer Webseite
+//ctDbl6j2y ID des onlify Dienstes
  
 	<script>
-uc.blockElements({
-  'Sy1naC5nN': '#psJobWidget' // Show youtube overlay over the element with ID 'custom-container'
-  'SJFe9NousWX': '.another-example' // Show Adition overlay over the element with class 'another-example'
-});
-</script> 
+
 
 
 
