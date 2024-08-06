@@ -7,14 +7,15 @@
     <title>My CMP v2 Testpage</title>  
 
     <!-- BEGIN Usercentrics related code -->
-
     <link rel="preconnect" href="//privacy-proxy.usercentrics.eu">
     <link rel="preload" href="//privacy-proxy.usercentrics.eu/latest/uc-block.bundle.js" as="script">
     <script id="usercentrics-cmp" data-settings-id="O-NhwsNjh" src="https://web.cmp.usercentrics.eu/ui/loader.js" async></script>
     <script type="application/javascript" src="https://privacy-proxy.usercentrics.eu/latest/uc-block.bundle.js"></script>
-
-    <!-- END Usercentrics related code -->
- 
+    <script>
+        // (optional) additional configs for the Smart Data Protector 
+        uc.reloadOnOptIn('BJz7qNsdj-7'); // reload page on YouTube opt-in
+    </script>
+   
 
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
